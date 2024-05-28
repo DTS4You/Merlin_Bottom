@@ -13,25 +13,22 @@ class Global_Module:
 
 class Global_WS2812:
 
-    numpix_1            = 30            # Anz. LEDs im 1. Stripe -> Einschlagbahn
-    numpix_2            = 256           # Anz. LEDs im 2. Stripe -> Umlaufbahn alt innen
-    numpix_3            = 256           # Anz. LEDs im 3. Stripe -> Umlaufbahn alt aussen
-    numpix_4            = 256           # Anz. LEDs im 4. Stripe -> Umlaufbahn neu innen
-    numpix_5            = 256           # Anz. LEDs im 5. Stripe -> Umlaufbahn neu aussen
-    numpix_6            = 8             # Anz. LEDs im 4. Stripe -> Splitter-Strahl
+    numpix_1            = 256           # Anz. LEDs im 1. Stripe -> Alle LED Segmente
 
-    seg_01_strip        = 0             #  1. Seg -> Stripe      # Einschlagbahn
+    seg_01_strip        = 0             #  1. Seg -> Stripe      # Spiegel -> Ring
     seg_01_start        = 0             #  1. Seg -> Start
     seg_01_count        = 30            #  1. Seg -> Anzahl
 
-    seg_02_strip        = 1             #  2. Seg -> Stripe      # Umlaufbahn alt innen
-    seg_02_start        = 0             #  2. Seg -> Start
-    seg_02_count        = 256           #  2. Seg -> Anzahl
+    seg_02_strip        = 0             #  2. Seg -> Stripe      # Laser Sender
+    seg_02_start        = 30            #  2. Seg -> Start
+    seg_02_count        = 30            #  2. Seg -> Anzahl
 
-    seg_03_strip        = 2             #  3. Seg -> Stripe      # Umlaufbahn alt aussen
-    seg_03_start        = 0             #  3. Seg -> Start
-    seg_03_count        = 256           #  3. Seg -> Anzahl
+    seg_03_strip        = 0             #  3. Seg -> Stripe      # Laser Empfänger
+    seg_03_start        = 60            #  3. Seg -> Start
+    seg_03_count        = 30            #  3. Seg -> Anzahl
     
+    #--------------------------------------------------------------------------
+
     seg_04_strip        = 3             #  4. Seg -> Stripe      # Umlaufbahn neu innen
     seg_04_start        = 0             #  4. Seg -> Start
     seg_04_count        = 256           #  4. Seg -> Anzahl

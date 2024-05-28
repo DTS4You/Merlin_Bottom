@@ -1,6 +1,4 @@
-###############################################################################
-# Module WS2812 V3
-###############################################################################
+# Module WS2812 V1.01
 import time # type: ignore
 import libs.module_neopixel as module_neopixel
 from libs.module_init import Global_WS2812 as MyGlobal
@@ -68,12 +66,12 @@ class Ledsegment:
     def set_color_blink_on(self, color_value):
         self.color_blink_on = color_value
 
-    def set_pixel(self, pos, color=None):
+    def set_pixel(self, pixel_num, color=None):
         if color:
             self.color_value = color
         else:
             self.color_value = self.color_show
-        self.neopixel.set_pixel(self.start + pos, self.color_value)
+        self.neopixel.set_pixel(self.start + pixel_num, self.color_value)
 
     def show_on(self):
         self.color_show = self.color_on
@@ -122,20 +120,46 @@ def setup_ws2812():
 
     ledstate = LedState()
     
+    # WS2812 Pins -> Pin 2 - Pin 9
+
     strip_obj.append(module_neopixel.Neopixel(mg.numpix_1, 0, 2, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_2, 1, 3, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_3, 2, 4, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_4, 3, 5, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_5, 4, 6, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_6, 5, 7, "GRB"))
     
-    led_obj.append(Ledsegment(strip_obj[mg.seg_01_strip], mg.seg_01_start, mg.seg_01_count))      #  (01) -> LED Position -> # 01 #
-    led_obj.append(Ledsegment(strip_obj[mg.seg_02_strip], mg.seg_02_start, mg.seg_02_count))      #  (02) -> LED Position -> # 02 #
-    led_obj.append(Ledsegment(strip_obj[mg.seg_03_strip], mg.seg_03_start, mg.seg_03_count))      #  (03) -> LED Position -> # 03 #
-    led_obj.append(Ledsegment(strip_obj[mg.seg_04_strip], mg.seg_04_start, mg.seg_04_count))      #  (04) -> LED Position -> # 04 #
-    led_obj.append(Ledsegment(strip_obj[mg.seg_05_strip], mg.seg_05_start, mg.seg_05_count))      #  (05) -> LED Position -> # 05 #
-    led_obj.append(Ledsegment(strip_obj[mg.seg_06_strip], mg.seg_06_start, mg.seg_06_count))      #  (06) -> LED Position -> # 06 #
-    
+    # =========================================================================
+
+    led_obj.append(Ledsegment(strip_obj[mg.seg_01_strip], mg.seg_01_start, mg.seg_01_count))      #  0, 0  (01) -> LED Position -> # 01 #
+    led_obj.append(Ledsegment(strip_obj[mg.seg_02_strip], mg.seg_02_start, mg.seg_02_count))      #  0, 1  (02) -> LED Position -> # 02 #
+    led_obj.append(Ledsegment(strip_obj[mg.seg_03_strip], mg.seg_03_start, mg.seg_03_count))      #  0, 2  (03) -> LED Position -> # 03 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_04_strip], mg.seg_04_start, mg.seg_04_count))      #  1, 0  (04) -> LED Position -> # 04 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_05_strip], mg.seg_05_start, mg.seg_05_count))      #  1, 1  (05) -> LED Position -> # 05 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_06_strip], mg.seg_06_start, mg.seg_06_count))      #  1, 2  (06) -> LED Position -> # 06 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_07_strip], mg.seg_07_start, mg.seg_07_count))      #  2, 0  (07) -> LED Position -> # 07 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_08_strip], mg.seg_08_start, mg.seg_08_count))      #  2, 1  (08) -> LED Position -> # 08 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_09_strip], mg.seg_09_start, mg.seg_09_count))      #  2, 2  (09) -> LED Position -> # 09 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_10_strip], mg.seg_10_start, mg.seg_10_count))      #  3, 0  (10) -> LED Position -> # 10 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_11_strip], mg.seg_11_start, mg.seg_11_count))      #  3, 1  (11) -> LED Position -> # 11 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_12_strip], mg.seg_12_start, mg.seg_12_count))      #  3, 2  (12) -> LED Position -> # 12 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_13_strip], mg.seg_13_start, mg.seg_13_count))      #  4, 0  (13) -> LED Position -> # 13 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_14_strip], mg.seg_14_start, mg.seg_14_count))      #  5, 0  (14) -> LED Position -> # 14 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_15_strip], mg.seg_15_start, mg.seg_15_count))      #  1, 2  (15) -> LED Position -> # 03 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_16_strip], mg.seg_16_start, mg.seg_16_count))      #  1, 3  (16) -> LED Position -> # 04 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_17_strip], mg.seg_17_start, mg.seg_17_count))      #  1, 4  (17) -> LED Position -> # 05 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_18_strip], mg.seg_18_start, mg.seg_18_count))      #  1, 5  (18) -> LED Position -> # 06 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_19_strip], mg.seg_19_start, mg.seg_19_count))      #  1, 6  (19) -> LED Position -> # 07 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_20_strip], mg.seg_20_start, mg.seg_20_count))      #  1, 7  (20) -> LED Position -> # 08 #--
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_21_strip], mg.seg_21_start, mg.seg_21_count))      #  2, 0  (21) -> LED Position -> # 01 #--
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_22_strip], mg.seg_22_start, mg.seg_22_count))      #  2, 1  (22) -> LED Position -> # 02 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_23_strip], mg.seg_23_start, mg.seg_23_count))      #  2, 2  (23) -> LED Position -> # 03 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_24_strip], mg.seg_24_start, mg.seg_24_count))      #  2, 3  (24) -> LED Position -> # 04 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_25_strip], mg.seg_25_start, mg.seg_25_count))      #  2, 4  (25) -> LED Position -> # 05 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_26_strip], mg.seg_26_start, mg.seg_26_count))      #  2, 5  (26) -> LED Position -> # 06 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_27_strip], mg.seg_27_start, mg.seg_27_count))      #  2, 6  (27) -> LED Position -> # 07 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_28_strip], mg.seg_28_start, mg.seg_28_count))      #  2, 7  (28) -> LED Position -> # 08 #--
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_29_strip], mg.seg_29_start, mg.seg_29_count))      #  3, 0  (29) -> LED Position -> # 01 #--
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_30_strip], mg.seg_30_start, mg.seg_30_count))      #  3, 1  (30) -> LED Position -> # 02 #
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_31_strip], mg.seg_31_start, mg.seg_31_count))      #  3, 2  (31) -> LED Position -> # 03 #--
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_32_strip], mg.seg_32_start, mg.seg_32_count))      #  4, 0  (32) -> LED Position -> # 01 #--
+    # led_obj.append(Ledsegment(strip_obj[mg.seg_33_strip], mg.seg_33_start, mg.seg_33_count))      #  5, 0  (33) -> LED Position -> # 01 #--
+
     for strips in strip_obj:
         strips.brightness(255)
    
@@ -286,7 +310,7 @@ def do_obj_on_off_def_off():
         do_refresh()
 
 def do_dot_test():
-    delay_time = 0.05
+    delay_time = 0.2
     color_now = (0,10,60)
     for y in range(len(led_obj)):
         for x in range(led_obj[y].count):
@@ -313,27 +337,29 @@ def set_led_obj(obj,state):
 # -----------------------------------------------------------------------------
 
 def main():
-
-    try:
-        print("Start")
-        
-        print("WS2812 -> Setup")
-        setup_ws2812()
-        
-        #print("WS2812 -> Run self test")
-        #self_test()
     
-        print("WS2812 -> Test -> LED")
-        do_dot_test()
+    print("WS2812 -> Start of Program !!!")
 
-    except KeyboardInterrupt:
-        print("Keyboard Interrupt")
-        # Aufräumen
-        do_all_off()
-
-    finally:
-        print("Exiting the program")
+    print("WS2812 -> Setup")
+    setup_ws2812()
+        
+    print("WS2812 -> Run self test")
+    self_test()
     
+    #print("WS2812 -> Test -> LED")
+    #test_led(0,0)
+
+    print("WS2812 -> Object Test")
+    do_obj_on_off_def_off()
+
+    #print("WS2812 -> LED-Dot-Test")
+    #do_dot_test()
+
+    print("WS2812 -> Segment-Blink")
+    do_blink_test()
+        
+    
+
     print("WS2812 -> End of Program !!!")
 
 # End
@@ -343,5 +369,4 @@ def main():
 #------------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    
     main()
