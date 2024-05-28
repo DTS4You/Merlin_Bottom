@@ -101,6 +101,6 @@ if __name__ == "__main__":
     main()      # Start Main $$$
 
 # Normal sollte das Programm hier nie ankommen !
-print("___End of Programm___ !!!")
+print("___End of Programm___ -> No Go")
 
 # ##############################################################################
