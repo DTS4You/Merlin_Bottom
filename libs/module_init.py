@@ -46,10 +46,10 @@ class Global_WS2812:
 
     color_def           = (  0,  0,  5)
     color_off           = (  0,  0,  0)
-    color_on            = (100,100,100)
+    color_on            = (255, 20, 20)
     color_dot           = ( 50, 50, 50)
-    color_blink_on      = (100,100,100)
-    color_blink_off     = ( 30, 30, 30)
+    color_blink_on      = (255, 20, 20)
+    color_blink_off     = (  0,  0,  5)
 
 
 class Global_Default:
@@ -62,7 +62,6 @@ def main():
     print("Start Global Init")
     mg = Global_WS2812
     print(mg.numpix_1)
-    print(mg.numpix_2)
     print(mg.seg_01_strip, mg.seg_01_start, mg.seg_01_count)
     print(mg.seg_02_strip, mg.seg_02_start, mg.seg_02_count)
 
