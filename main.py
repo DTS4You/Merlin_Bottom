@@ -8,12 +8,9 @@ from libs.module_init import Global_Module as MyModule
 import time                                                 # type: ignore
 
 
-
-
-def blink_func():
-    print("-> Blink")
-    MyWS2812.do_blink()
-
+time_on    = 0.3
+time_off   = 0.7
+time_pause = 1.5
 
 # ------------------------------------------------------------------------------
 # --- Main Function                                                          ---
@@ -22,27 +19,34 @@ def main():
 
     print("=== Start Main ===")
     
-    blink_couter = 0
+
+    MyWS2812.do_all_def()
 
     try:
         print("Start Main Loop")
  
         while (True):
 
-            if blink_couter > 50:
-                blink_couter = 0
-                #print("Blink Funktion")
-                blink_func()
-            
+            for i in range(0,2):
+                MyWS2812.set_led_obj(1,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(1,"def")
+                time.sleep(time_off)
+            for i in range(0,2):
+                MyWS2812.set_led_obj(0,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(0,"def")
+                MyWS2812.set_led_obj(2,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(2,"def")
+                time.sleep(time_off)
+            time.sleep(time_pause)
 
-            blink_couter = blink_couter + 1
-            # Loop-Delay !!!
-            time.sleep(0.01)        # 10ms
-    
     except KeyboardInterrupt:
         print("Keyboard Interrupt")
     finally:
-        print("Exiting the program")   
+        print("Exiting the program")
+        MyWS2812.do_all_off()   
 
     print("=== End of Main ===")
 
@@ -69,13 +73,13 @@ if __name__ == "__main__":
 
     if MyModule.inc_ws2812:
         print("WS2812 -> Load-Module")
-        import libs.module_ws2812_v3 as MyWS2812         # Modul WS2812  -> WS2812-Ansteuerung
+        import libs.module_ws2812_v2 as MyWS2812         # Modul WS2812  -> WS2812-Ansteuerung
         #print("WS2812 -> Setup")
         MyWS2812.setup_ws2812()
         ### Test ###
-        #print("WS2812 -> Run self test")
-        #MyWS2812.self_test()
-        #print("WS2812 -> Blink Test")
+        print("WS2812 -> Run self test")
+        MyWS2812.self_test()
+        print("WS2812 -> Blink Test")
         #MyWS2812.do_blink_test()
         #print("WS2812 -> Dot-Test")
         #MyWS2812.do_dot_test()
