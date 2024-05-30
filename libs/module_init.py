@@ -14,8 +14,8 @@ class Global_Module:
 
 class Global_WS2812:
 
-    #numpix_1            = 128           # Anz. LEDs im 1. Stripe -> Alle LED Segmente
-    numpix_1            = 256           # Anz. LEDs im 1. Stripe -> Test !!!
+    numpix_1            = 128           # Anz. LEDs im 1. Stripe -> Alle LED Segmente
+    #numpix_1           = 256           # Anz. LEDs im 1. Stripe -> Test !!!
 
     seg_01_strip        = 0             #  1. Seg -> Stripe      # Spiegel -> Ring
     seg_01_start        = 0             #  1. Seg -> Start
