@@ -1,7 +1,8 @@
 ######################################################
 ### Main-Program                                   ###
 ### Projekt: Merlin                                ###
-### Version: 1.00                                  ###
+### Version: 1.01                                  ###
+### Datum  : 20.03.2025                            ###
 ######################################################
 from machine import Pin, Timer                              # type: ignore
 from libs.module_init import Global_Module as MyModule
