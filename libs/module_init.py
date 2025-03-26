@@ -60,11 +60,11 @@ class Global_WS2812:
     seg_06_start        = 0             #  6. Seg -> Start
     seg_06_count        = 200           #  6. Seg -> Anzahl
     
-    seg_07_strip        = 6             #  7. Seg -> Stripe      # 5 -> Laser
+    seg_07_strip        = 5             #  7. Seg -> Stripe      # 5 -> Laser
     seg_07_start        = 200           #  7. Seg -> Start
     seg_07_count        = 16            #  7. Seg -> Anzahl
 
-    seg_08_strip        = 7             #  8. Seg -> Stripe      # 5 -> Empfänger
+    seg_08_strip        = 5             #  8. Seg -> Stripe      # 5 -> Empfänger
     seg_08_start        = 216           #  8. Seg -> Start
     seg_08_count        = 16            #  8. Seg -> Anzahl
     
