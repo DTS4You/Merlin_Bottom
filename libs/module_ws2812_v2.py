@@ -123,11 +123,11 @@ def setup_ws2812():
     # WS2812 Pins -> Pin 2 - Pin 9
 
     strip_obj.append(module_neopixel.Neopixel(mg.numpix_1, 0, 2, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_2, 0, 3, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_3, 0, 4, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_4, 0, 5, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_5, 0, 6, "GRB"))
-    strip_obj.append(module_neopixel.Neopixel(mg.numpix_6, 0, 7, "GRB"))
+    strip_obj.append(module_neopixel.Neopixel(mg.numpix_2, 1, 3, "GRB"))
+    strip_obj.append(module_neopixel.Neopixel(mg.numpix_3, 2, 4, "GRB"))
+    strip_obj.append(module_neopixel.Neopixel(mg.numpix_4, 3, 5, "GRB"))
+    strip_obj.append(module_neopixel.Neopixel(mg.numpix_5, 4, 6, "GRB"))
+    strip_obj.append(module_neopixel.Neopixel(mg.numpix_6, 5, 7, "GRB"))
     
     # =========================================================================
 

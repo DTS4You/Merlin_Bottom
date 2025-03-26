@@ -32,19 +32,112 @@ def main():
  
         while (True):
 
-            for i in range(0,2):
+            for i in range(0,2):                    # Laser
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Boden 1
+                MyWS2812.set_led_obj(0,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(0,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Spiegel
+                MyWS2812.set_led_obj(5,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(5,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Empfänger
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            #----------------------------------------------------------
+            for i in range(0,2):                    # Laser
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Boden 2
                 MyWS2812.set_led_obj(1,"on")
                 time.sleep(time_on)
                 MyWS2812.set_led_obj(1,"def")
                 time.sleep(time_off)
-            for i in range(0,2):
-                MyWS2812.set_led_obj(0,"on")
+            for i in range(0,2):                    # Spiegel
+                MyWS2812.set_led_obj(5,"on")
                 time.sleep(time_on)
-                MyWS2812.set_led_obj(0,"def")
+                MyWS2812.set_led_obj(5,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Empfänger
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            #----------------------------------------------------------
+            for i in range(0,2):                    # Laser
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Boden 3
                 MyWS2812.set_led_obj(2,"on")
                 time.sleep(time_on)
                 MyWS2812.set_led_obj(2,"def")
                 time.sleep(time_off)
+            for i in range(0,2):                    # Spiegel
+                MyWS2812.set_led_obj(5,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(5,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Empfänger
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            #----------------------------------------------------------
+            for i in range(0,2):                    # Laser
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Boden 4
+                MyWS2812.set_led_obj(3,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(3,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Spiegel
+                MyWS2812.set_led_obj(5,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(5,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Empfänger
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            #----------------------------------------------------------
+            for i in range(0,2):                    # Laser
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Boden 5
+                MyWS2812.set_led_obj(4,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(4,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Spiegel
+                MyWS2812.set_led_obj(5,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(5,"def")
+                time.sleep(time_off)
+            for i in range(0,2):                    # Empfänger
+                MyWS2812.set_led_obj(6,"on")
+                time.sleep(time_on)
+                MyWS2812.set_led_obj(6,"def")
+                time.sleep(time_off)
+            #----------------------------------------------------------            
+
             time.sleep(time_pause)
 
     except KeyboardInterrupt:
