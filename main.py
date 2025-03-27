@@ -42,7 +42,7 @@ def main():
                 time.sleep(time_on)
                 MyWS2812.set_led_obj(0,"def")
                 time.sleep(time_off)
-            for i in range(0,2):                    # Spiegel
+            for i in range(0,2):                    # Spiegel / color_half
                 MyWS2812.set_led_obj(5,"on")
                 time.sleep(time_on)
                 MyWS2812.set_led_obj(5,"def")

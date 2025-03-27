@@ -42,6 +42,7 @@ class Ledsegment:
         self.color_off = (0,0,0)
         self.color_blink_on = (0,0,0)
         self.color_blink_off = (0,0,0)
+        self.color_half = (0,0,0)
         self.color_show = (0,0,0)
         self.color_value = (0,0,0)
 
@@ -65,6 +66,9 @@ class Ledsegment:
 
     def set_color_blink_on(self, color_value):
         self.color_blink_on = color_value
+    
+    def set_color_half(self, color_value):
+        self.color_half = color_value
 
     def set_pixel(self, pixel_num, color=None):
         if color:
@@ -85,6 +89,11 @@ class Ledsegment:
 
     def show_off(self):
         self.color_show = self.color_off
+        self.blink_state = False
+        self.set_line()
+
+    def show_half(self):
+        self.color_show = self.color_half
         self.blink_state = False
         self.set_line()
 
@@ -183,6 +192,7 @@ def setup_ws2812():
         leds.set_color_show(mg.color_dot)
         leds.set_color_blink_off(mg.color_blink_off)
         leds.set_color_blink_on(mg.color_blink_on)
+        leds.set_color_half(mg.color_half)
     
     # Blinken aus
     do_all_no_blink()
@@ -335,6 +345,8 @@ def set_led_obj(obj,state):
         led_obj[obj].show_def()
     if state == "on":
         led_obj[obj].show_on()
+    if state == "half":
+        led_obj[obj].show_half()
     if state == "blink":
         led_obj[obj].show_blink()
     do_refresh()
