@@ -1,8 +1,7 @@
 # #############################################################################
 # ### MyGlobal
-# ### Merlin V1.00
+# ### Merlin V1.01
 # #############################################################################
-
 
 class Global_Module:
     
@@ -19,6 +18,10 @@ class Global_WS2812:
     numpix_3            = 16            # Anz. LEDs im 3. Stripe -> Boden 3
     numpix_4            = 16            # Anz. LEDs im 4. Stripe -> Boden 4
     numpix_5            = 16            # Anz. LEDs im 5. Stripe -> Boden 5
+    # Gesamtzahl ermitteln !!!
+    # Spiegel   = 68 + x
+    # Laser     = 23
+    # Empfänger = 16
     numpix_6            = 256           # Anz. LEDs im 6. Stripe -> Spiegel, Laser, Empfänger
     #numpix_1           = 256           # Anz. LEDs im 1. Stripe -> Test !!!
 
