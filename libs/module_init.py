@@ -24,7 +24,7 @@ class Global_WS2812:
     # Laser     = 23
     # Empfänger = 16
     # Summe     : 280 LEDs
-    numpix_6            = 280           # Anz. LEDs im 6. Stripe -> Spiegel, Laser, Empfänger
+    numpix_6            = 320           # Anz. LEDs im 6. Stripe -> Spiegel, Laser, Empfänger
     #numpix_1           = 256           # Anz. LEDs im 1. Stripe -> Test !!!
 
     #seg_01_strip        = 0             #  1. Seg -> Stripe      # 0 -> Spiegel -> Ring
@@ -71,7 +71,7 @@ class Global_WS2812:
 
     seg_08_strip        = 5             #  8. Seg -> Stripe      # 7 -> Empfänger
     seg_08_start        = 264           #  8. Seg -> Start
-    seg_08_count        = 16            #  8. Seg -> Anzahl
+    seg_08_count        = 30            #  8. Seg -> Anzahl
     
 # -----------------------------------------------------------------------------
 

@@ -48,9 +48,9 @@ def main():
                 MyWS2812.set_led_obj(5,"def")
                 time.sleep(time_off)
             for i in range(0,2):                    # Empfänger
-                MyWS2812.set_led_obj(6,"on")
+                MyWS2812.set_led_obj(7,"on")
                 time.sleep(time_on)
-                MyWS2812.set_led_obj(6,"def")
+                MyWS2812.set_led_obj(7,"def")
                 time.sleep(time_off)
             #----------------------------------------------------------
             for i in range(0,2):                    # Laser
@@ -69,9 +69,9 @@ def main():
                 MyWS2812.set_led_obj(5,"def")
                 time.sleep(time_off)
             for i in range(0,2):                    # Empfänger
-                MyWS2812.set_led_obj(6,"on")
+                MyWS2812.set_led_obj(7,"on")
                 time.sleep(time_on)
-                MyWS2812.set_led_obj(6,"def")
+                MyWS2812.set_led_obj(7,"def")
                 time.sleep(time_off)
             #----------------------------------------------------------
             for i in range(0,2):                    # Laser
@@ -90,9 +90,9 @@ def main():
                 MyWS2812.set_led_obj(5,"def")
                 time.sleep(time_off)
             for i in range(0,2):                    # Empfänger
-                MyWS2812.set_led_obj(6,"on")
+                MyWS2812.set_led_obj(7,"on")
                 time.sleep(time_on)
-                MyWS2812.set_led_obj(6,"def")
+                MyWS2812.set_led_obj(7,"def")
                 time.sleep(time_off)
             #----------------------------------------------------------
             for i in range(0,2):                    # Laser
@@ -111,9 +111,9 @@ def main():
                 MyWS2812.set_led_obj(5,"def")
                 time.sleep(time_off)
             for i in range(0,2):                    # Empfänger
-                MyWS2812.set_led_obj(6,"on")
+                MyWS2812.set_led_obj(7,"on")
                 time.sleep(time_on)
-                MyWS2812.set_led_obj(6,"def")
+                MyWS2812.set_led_obj(7,"def")
                 time.sleep(time_off)
             #----------------------------------------------------------
             for i in range(0,2):                    # Laser
@@ -132,9 +132,9 @@ def main():
                 MyWS2812.set_led_obj(5,"def")
                 time.sleep(time_off)
             for i in range(0,2):                    # Empfänger
-                MyWS2812.set_led_obj(6,"on")
+                MyWS2812.set_led_obj(7,"on")
                 time.sleep(time_on)
-                MyWS2812.set_led_obj(6,"def")
+                MyWS2812.set_led_obj(7,"def")
                 time.sleep(time_off)
             #----------------------------------------------------------            
 
