@@ -40,10 +40,10 @@ class Ledsegment:
         self.color_on = (0,0,0)
         self.color_default = (0,0,0)
         self.color_off = (0,0,0)
-        self.color_blink_on = (0,0,0)
-        self.color_blink_off = (0,0,0)
-        self.color_half = (0,0,0)
-        self.color_show = (0,0,0)
+        self.color_red1 = (0,0,0)
+        self.color_red2 = (0,0,0)
+        self.color_red3 = (0,0,0)
+        self.color_red4 = (0,0,0)
         self.color_value = (0,0,0)
 
     def set_color_on(self, color_on):
@@ -58,17 +58,17 @@ class Ledsegment:
     def set_color_value(self, color_value):
         self.color_value = color_value
 
-    def set_color_show(self, color_value):
-        self.color_show = color_value
+    def set_color_red1(self, color_value):
+        self.color_red1 = color_value
 
-    def set_color_blink_off(self, color_value):
-        self.color_blink_off = color_value
+    def set_color_red2(self, color_value):
+        self.color_red2 = color_value
 
-    def set_color_blink_on(self, color_value):
-        self.color_blink_on = color_value
+    def set_color_red3(self, color_value):
+        self.color_red3 = color_value
     
-    def set_color_half(self, color_value):
-        self.color_half = color_value
+    def set_color_red4(self, color_value):
+        self.color_red4 = color_value
 
     def set_pixel(self, pixel_num, color=None):
         if color:
@@ -188,11 +188,10 @@ def setup_ws2812():
         leds.set_color_off(mg.color_off)
         leds.set_color_def(mg.color_def)
         leds.set_color_on(mg.color_on)
-        leds.set_color_value(mg.color_dot)
-        leds.set_color_show(mg.color_dot)
-        leds.set_color_blink_off(mg.color_blink_off)
-        leds.set_color_blink_on(mg.color_blink_on)
-        leds.set_color_half(mg.color_half)
+        leds.set_color_red1(mg.color_red1)
+        leds.set_color_red2(mg.color_red2)
+        leds.set_color_red3(mg.color_red3)
+        leds.set_color_red4(mg.color_red4)
     
     # Blinken aus
     do_all_no_blink()
