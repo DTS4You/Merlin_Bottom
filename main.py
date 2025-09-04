@@ -33,6 +33,11 @@ def main():
 
     try:
         print("Start Main Loop")
+        MyWS2812.set_led_obj(0,"off")
+        MyWS2812.set_led_obj(1,"off")
+        MyWS2812.set_led_obj(2,"off")
+        MyWS2812.set_led_obj(3,"off")
+        MyWS2812.set_led_obj(4,"off")
  
         while (True):
 
