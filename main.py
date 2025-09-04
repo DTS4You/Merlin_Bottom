@@ -232,12 +232,12 @@ if __name__ == "__main__":
     if MyModule.inc_ws2812:
         print("WS2812 -> Load-Module")
         import libs.module_ws2812_v2 as MyWS2812         # Modul WS2812  -> WS2812-Ansteuerung
-        #print("WS2812 -> Setup")
+        print("WS2812 -> Setup")
         MyWS2812.setup_ws2812()
         ### Test ###
-        print("WS2812 -> Run self test")
-        MyWS2812.self_test()
-        print("WS2812 -> Blink Test")
+        #print("WS2812 -> Run self test")
+        #MyWS2812.self_test()
+        #print("WS2812 -> Blink Test")
         #MyWS2812.do_blink_test()
         #print("WS2812 -> Dot-Test")
         #MyWS2812.do_dot_test()

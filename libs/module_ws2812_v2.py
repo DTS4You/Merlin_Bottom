@@ -92,8 +92,23 @@ class Ledsegment:
         self.blink_state = False
         self.set_line()
 
-    def show_half(self):
-        self.color_show = self.color_half
+    def show_red1(self):
+        self.color_show = self.color_red1
+        self.blink_state = False
+        self.set_line()
+
+    def show_red2(self):
+        self.color_show = self.color_red2
+        self.blink_state = False
+        self.set_line()
+
+    def show_red3(self):
+        self.color_show = self.color_red3
+        self.blink_state = False
+        self.set_line()
+
+    def show_red4(self):
+        self.color_show = self.color_red4
         self.blink_state = False
         self.set_line()
 
@@ -344,8 +359,14 @@ def set_led_obj(obj,state):
         led_obj[obj].show_def()
     if state == "on":
         led_obj[obj].show_on()
-    if state == "half":
-        led_obj[obj].show_half()
+    if state == "red1":
+        led_obj[obj].show_red1()
+    if state == "red2":
+        led_obj[obj].show_red2()
+    if state == "red3":
+        led_obj[obj].show_red3()
+    if state == "red4":
+        led_obj[obj].show_red4()
     if state == "blink":
         led_obj[obj].show_blink()
     do_refresh()
