@@ -1,8 +1,8 @@
 ######################################################
 ### Main-Program                                   ###
 ### Projekt: Merlin                                ###
-### Version: 1.01                                  ###
-### Datum  : 27.03.2025                            ###
+### Version: 1.20                                  ###
+### Datum  : 04.09.2025                            ###
 ######################################################
 from machine import Pin, Timer                              # type: ignore
 from libs.module_init import Global_Module as MyModule
@@ -45,147 +45,157 @@ def main():
             MyWS2812.set_led_obj(6,"red2")
             time.sleep(time_on)
             MyWS2812.set_led_obj(6,"def")
-            time.sleep(time_off)
+            time.sleep(time_off_2)
             # 8 -> Boden 1 - 1
             MyWS2812.set_led_obj(0,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(0,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_1)
             # 11 -> Boden 1 - 2
             MyWS2812.set_led_obj(0,"red3")
             time.sleep(time_on)
             MyWS2812.set_led_obj(0,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_2)
             # 16 -> Spiegel 1
             MyWS2812.set_led_obj(5,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 17 -> Empfänger 1
             MyWS2812.set_led_obj(7,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_3)
             # 19 -> Spiegel 2
             MyWS2812.set_led_obj(5,"red4")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 20 -> Empfänger 2
             MyWS2812.set_led_obj(7,"red")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_4)
             # 32 -> Laser 1
             MyWS2812.set_led_obj(6,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(6,"def")
-            time.sleep(time_off)
+            time.sleep(time_off_1)
             # 35 -> Laser 2
             MyWS2812.set_led_obj(6,"red2")
             time.sleep(time_on)
             MyWS2812.set_led_obj(6,"def")
-            time.sleep(time_off)
+            time.sleep(time_off_2)
             # 40 -> Boden 2 - 1
             MyWS2812.set_led_obj(1,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(1,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_1)
             # 43 -> Boden 2 - 2
             MyWS2812.set_led_obj(1,"red3")
             time.sleep(time_on)
             MyWS2812.set_led_obj(1,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_2)
             # 48 -> Spiegel 1
             MyWS2812.set_led_obj(5,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 49 -> Empfänger 1
             MyWS2812.set_led_obj(7,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_3)
             # 51 -> Spiegel 2
             MyWS2812.set_led_obj(5,"red4")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 52 -> Empfänger 2
             MyWS2812.set_led_obj(7,"red")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_4)
             # 64 -> Laser 1
             MyWS2812.set_led_obj(6,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(6,"def")
-            time.sleep(time_off)
+            time.sleep(time_off_1)
             # 67 -> Laser 2
             MyWS2812.set_led_obj(6,"red2")
             time.sleep(time_on)
             MyWS2812.set_led_obj(6,"def")
-            time.sleep(time_off)
+            time.sleep(time_off_2)
             # 72 -> Boden 3 - 1
             MyWS2812.set_led_obj(2,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(2,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_1)
             # 75 -> Boden 3 - 2
             MyWS2812.set_led_obj(2,"red3")
             time.sleep(time_on)
             MyWS2812.set_led_obj(2,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_2)
             # 80 -> Spiegel 1
             MyWS2812.set_led_obj(5,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 81 -> Empfänger 1
             MyWS2812.set_led_obj(7,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_3)
             # 83 -> Spiegel 2
             MyWS2812.set_led_obj(5,"red4")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 84 -> Empfänger 2
             MyWS2812.set_led_obj(7,"red")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_4)
+            # 96 -> Laser 1
+            MyWS2812.set_led_obj(6,"red1")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(6,"def")
+            time.sleep(time_off_1)
+            # 99 -> Laser 2
+            MyWS2812.set_led_obj(6,"red2")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(6,"def")
+            time.sleep(time_off_2)
             # 104 -> Boden 4 - 1
             MyWS2812.set_led_obj(3,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(3,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_1)
             # 107 -> Boden 4 - 2
             MyWS2812.set_led_obj(3,"red3")
             time.sleep(time_on)
             MyWS2812.set_led_obj(3,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_2)
             # 112 -> Spiegel 1
             MyWS2812.set_led_obj(5,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 113 -> Empfänger 1
             MyWS2812.set_led_obj(7,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_3)
             # 115 -> Spiegel 2
             MyWS2812.set_led_obj(5,"red4")
             time.sleep(time_on)
             MyWS2812.set_led_obj(5,"def")
-            time.sleep(time_off)
+            time.sleep(time_none)
             # 116 -> Empfänger 2
             MyWS2812.set_led_obj(7,"red")
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
-            time.sleep(time_off)
+            time.sleep(time_off_4)
             #----------------------------------------------------------   
 
             time.sleep(time_pause)
