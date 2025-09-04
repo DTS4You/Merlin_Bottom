@@ -8,10 +8,12 @@ from machine import Pin, Timer                              # type: ignore
 from libs.module_init import Global_Module as MyModule
 import time                                                 # type: ignore
 
-
-time_on     = 0.2
-time_off_1  = 0.4
-time_off_2  = 0.2
+time_tick   = 0.2
+time_on     = time_tick * 1
+time_off_1  = time_tick * 2
+time_off_2  = time_tick * 4
+time_off_3  = time_tick * 1
+time_off_4  = time_tick * 11
 time_none   = 0.05
 time_pause  = 1.5
 
@@ -38,7 +40,7 @@ def main():
             MyWS2812.set_led_obj(6,"red1")
             time.sleep(time_on)
             MyWS2812.set_led_obj(6,"def")
-            time.sleep(time_off)
+            time.sleep(time_off_1)
             # 3 -> Laser 2
             MyWS2812.set_led_obj(6,"red2")
             time.sleep(time_on)
