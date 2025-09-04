@@ -353,21 +353,30 @@ def do_dot_test():
         time.sleep(delay_time)
         
 def set_led_obj(obj,state):
+    #print("SET_LED_OBJ")
     if state == "off":
+        #print("Off")
         led_obj[obj].show_off()
     if state == "def":
+        #print("Def")
         led_obj[obj].show_def()
     if state == "on":
+        #print("On")
         led_obj[obj].show_on()
     if state == "red1":
+        #print("Red1")
         led_obj[obj].show_red1()
     if state == "red2":
+        #print("Red2")
         led_obj[obj].show_red2()
     if state == "red3":
+        #print("Red3")
         led_obj[obj].show_red3()
     if state == "red4":
+        #print("Red4")
         led_obj[obj].show_red4()
     if state == "blink":
+        #print("Blink")
         led_obj[obj].show_blink()
     do_refresh()
 
