@@ -38,6 +38,7 @@ def main():
  
         while (True):
 
+            # --- Boden 1 -----------------------------------------------------
             # 0 -> Laser 1
             MyWS2812.set_led_obj(6,"red1")
             time.sleep(time_on)
@@ -78,6 +79,7 @@ def main():
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
             time.sleep(time_off_4)
+            # --- Boden 2 -----------------------------------------------------
             # 32 -> Laser 1
             MyWS2812.set_led_obj(6,"red1")
             time.sleep(time_on)
@@ -118,6 +120,7 @@ def main():
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
             time.sleep(time_off_4)
+            # --- Boden 3 -----------------------------------------------------
             # 64 -> Laser 1
             MyWS2812.set_led_obj(6,"red1")
             time.sleep(time_on)
@@ -158,6 +161,7 @@ def main():
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
             time.sleep(time_off_4)
+            # --- Boden 4 -----------------------------------------------------
             # 96 -> Laser 1
             MyWS2812.set_led_obj(6,"red1")
             time.sleep(time_on)
@@ -198,6 +202,47 @@ def main():
             time.sleep(time_on)
             MyWS2812.set_led_obj(7,"off")
             time.sleep(time_off_4)
+            # --- Boden 5 -----------------------------------------------------
+            # 0 -> Laser 1
+            MyWS2812.set_led_obj(6,"red1")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(6,"def")
+            time.sleep(time_off_1)
+            # 3 -> Laser 2
+            MyWS2812.set_led_obj(6,"red2")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(6,"def")
+            time.sleep(time_off_2)
+            # 8 -> Boden 5 - 1
+            MyWS2812.set_led_obj(4,"red1")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(4,"off")
+            time.sleep(time_off_1)
+            # 11 -> Boden 5 - 2
+            MyWS2812.set_led_obj(4,"red3")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(4,"off")
+            time.sleep(time_off_2)
+            # 16 -> Spiegel 1
+            MyWS2812.set_led_obj(5,"red1")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(5,"def")
+            time.sleep(time_none)
+            # 17 -> Empfänger 1
+            MyWS2812.set_led_obj(7,"red1")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(7,"off")
+            time.sleep(time_off_3)
+            # 19 -> Spiegel 2
+            MyWS2812.set_led_obj(5,"red4")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(5,"def")
+            time.sleep(time_none)
+            # 20 -> Empfänger 2
+            MyWS2812.set_led_obj(7,"red")
+            time.sleep(time_on)
+            MyWS2812.set_led_obj(7,"off")
+            time.sleep(time_off_4)
             #----------------------------------------------------------   
 
             time.sleep(time_pause)
@@ -210,7 +255,6 @@ def main():
 
     print("=== End of Main ===")
 
-# ==============================================================================
 # ==============================================================================
     
 # ###############################################################################
